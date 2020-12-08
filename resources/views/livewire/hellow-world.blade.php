@@ -1,9 +1,10 @@
 <div>
 
+
     @foreach($contacts as $contact)
-    @livewire('say-hi', ['contact' => $contact], key($contact->name))
-    <br>
-    <button wire:click="remove('{{$contact->name}}')">Remove</button>
+        @livewire('say-hi', ['contact' => $contact], key($contact->name))
+        <br>
+        <button wire:click="remove('{{$contact->name}}')">Remove</button>
     @endforeach
 
     <hr>
